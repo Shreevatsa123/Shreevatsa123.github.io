@@ -1,0 +1,58 @@
+/* Basic setup for our minimalist theme */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212; /* Very dark grey background */
+    color: #e0e0e0;            /* Light grey text */
+    margin: 0;
+    padding: 0;
+}
+
+/* This makes the page scroll smoothly when you click a nav link */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic styling for all sections */
+section {
+    /* Each section takes up the full height of the screen */
+    min-height: 100vh; 
+    padding: 60px 20px;
+    border-bottom: 1px solid #333; /* A subtle line between sections */
+}
+
+h1, h2 {
+    color: #ffffff; /* Pure white for main headings */
+    text-align: center;
+}
+
+/* We'll style the nav bar properly later */
+nav {
+    position: fixed; /* Makes the nav bar stick to the top */
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    text-align: center;
+    padding: 10px 0;
+    backdrop-filter: blur(5px); /* This gives it a cool "frosted glass" effect */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4a90e2; /* A nice blue for hover */
+}
