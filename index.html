@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Shreevatsa Agnihotri - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="logo">
+            <a href="#home">Shreevatsa Agnihotri</a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <section id="home">
@@ -25,30 +31,123 @@
 
     <section id="about">
         <h2>About Me</h2>
-        </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        </section>
+        <div class="about-content">
+            <p>
+                I am a Master's student in Data Science at the University of Maryland with professional experience in data engineering, predictive modeling, and building AI-driven solutions. I thrive in ambiguous problem spaces and enjoy translating complex business problems into technical solutions using machine learning, big data technologies, and statistical analysis.
+            </p>
+            <p>
+                My experience includes everything from engineering production ETL pipelines to training and fine-tuning models (like Generative AI and Computer Vision) on real-world datasets.
+            </p>
+            <div class="resume-links">
+                </div>
+        </div>
+    </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        </section>
+        <div class="skills-container">
+            <div class="skill-pills">
+                <span>Computer Vision (OpenCV)</span>
+                <span>Generative AI (Diffusion Models)</span>
+                <span>PyTorch</span>
+                <span>TensorFlow</span>
+                <span>Scikit-learn</span>
+                <span>Hugging Face (Transformers)</span>
+                <span>NLP</span>
+                <span>XGBoost</span>
+                <span>Predictive Modeling</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>R</span>
+                <span>PostgreSQL</span>
+                <span>Redshift</span>
+                <span>Apache Spark</span>
+                <span>ETL/ELT Pipelines</span>
+                <span>Databricks</span>
+                <span>AWS (Sagemaker, S3, Glue, EC2)</span>
+                <span>Apache Airflow</span>
+                <span>CometML</span>
+                <span>Cloud Computing</span>
+                <span>A/B Testing</span>
+                <span>Experimental Design</span>
+                <span>Causal Inference</span>
+                <span>Product Analytics</span>
+                <span>Statistical Modeling</span>
+                <span>Hypothesis Testing</span>
+                <span>Streamlit</span>
+                <span>Tableau</span>
+                <span>Plotly</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>Power BI</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>AI Financial Analyst Dashboard</h3>
+                <p>Designed and implemented core metrics and experimented with ML algorithms (XGBoost, LSTM) for predictive modeling. Built a Streamlit dashboard to communicate results to stakeholders.</p>
+                <a href="https://github.com/Shreevatsa123/stock-prediction-dashboard" target="_blank">View on GitHub</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Automated Job Scraper & Notifier</h3>
+                <p>Built an end-to-end automated data pipeline using Python, Selenium, and Docker. Integrated Apache Airflow to orchestrate containerized daily scraping workflows and store data in SQLite.</p>
+                <a href="https://github.com/Shreevatsa123/hire-me-H1B-scrapper-v2" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Voice Navigated Telemedicine Website</h3>
+                <p>Implemented deep learning RNN models for NLP (voice recognition) to build an applied AI system for accessibility. Validated the system with visually impaired users and published findings in a formal research paper.</p>
+                <a href="https://github.com/Shreevatsa123/voice-navigated-telemedicine-website" target="_blank">View on GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Associate Data Engineer</h3>
+            <h4>Shell Business Operations | Bengaluru, India</h4>
+            <h5>Aug 2023 - Aug 2025</h5>
+            <ul>
+                <li>Solved ambiguous problems by analyzing user behavior datasets, driving a 20% uplift in user engagement.</li>
+                <li>Engineered 30+ production ETL pipelines for large-scale (millions of daily records) datasets to enable downstream ML models.</li>
+                <li>Owned the end-to-end migration of a critical data model to Databricks, improving data consistency.</li>
+                <li>Recognized with an early promotion offer after 1.75 years.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-grid">
+            <div class="education-item">
+                <h3>University of Maryland</h3>
+                <p>MS in Data Science</p>
+                <p>Sep 2025 - May 2027</p>
+            </div>
+            <div class="education-item">
+                <h3>Manipal Institute of Technology</h3>
+                <p>B.Tech in Information Technology</p>
+                <p>GPA: 3.67/4.00</p>
+            </div>
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Get In Touch</h2>
         </section>
 
     <footer>
-        <p>© 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 Shreevatsa Agnihotri. All rights reserved.</p>
     </footer>
 
 </body>

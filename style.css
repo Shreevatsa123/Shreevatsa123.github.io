@@ -5,6 +5,10 @@ body {
     color: #e0e0e0;            /* Light grey text */
     margin: 0;
     padding: 0;
+
+        /* A subtle dot grid pattern */
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
 }
 
 /* This makes the page scroll smoothly when you click a nav link */
@@ -13,16 +17,16 @@ html {
 }
 
 /* Basic styling for all sections */
+/* Basic styling for all sections */
 section {
-    /* Each section takes up the full height of the screen */
-    min-height: 100vh; 
-    padding: 60px 20px;
+    padding: 80px 40px; /* 80px top/bottom, 40px left/right */
     border-bottom: 1px solid #333; /* A subtle line between sections */
 }
 
 h1, h2 {
     color: #ffffff; /* Pure white for main headings */
     text-align: center;
+    margin-bottom: 30px; /* Adds consistent space after headings */
 }
 
 /* We'll style the nav bar properly later */
@@ -31,15 +35,16 @@ nav {
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    text-align: center;
-    padding: 10px 0;
+    padding: 15px 40px; /* Adjusted padding */
     backdrop-filter: blur(5px); /* This gives it a cool "frosted glass" effect */
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}}
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav ul li {
@@ -55,4 +60,168 @@ nav a {
 
 nav a:hover {
     color: #4a90e2; /* A nice blue for hover */
+}
+
+/*================================
+  ABOUT SECTION
+=================================*/
+#about {
+    /* Uses CSS Grid to center the content */
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px; /* Constrains the width of the text */
+}
+
+.about-content p {
+    font-size: 1.2rem; /* Slightly larger text for the intro */
+    line-height: 1.6;
+}
+
+/*================================
+  SKILLS SECTION
+=================================*/
+.skills-container {
+    max-width: 900px;
+    margin: 0 auto; /* Centering the container */
+}
+
+.skills-container h3 {
+    color: #4a90e2; /* Using the same blue from our nav hover */
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap; /* Allows pills to wrap to the next line */
+    gap: 10px; /* Spacing between pills */
+}
+
+.skill-pills span {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 20px; /* This makes the "pill" shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*================================
+  PROJECTS SECTION
+=================================*/
+.project-grid {
+    display: grid;
+    /* Creates a responsive 3-column grid on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #1e1e1e; /* A slightly lighter dark-grey */
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lifts the card on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    text-align: left;
+    margin-top: 0;
+    color: #4a90e2;
+}
+
+.project-card p {
+    line-height: 1.5;
+}
+
+.project-card a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*================================
+  EXPERIENCE SECTION
+=================================*/
+.experience-item {
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.experience-item h3 {
+    text-align: left;
+    color: #4a90e2;
+    margin: 0;
+}
+.experience-item h4 {
+    text-align: left;
+    margin: 5px 0;
+    font-weight: 500;
+    color: #ccc;
+}
+.experience-item h5 {
+    text-align: left;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+    color: #999;
+}
+.experience-item ul {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/*================================
+  EDUCATION SECTION
+=================================*/
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.education-item {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.education-item h3 {
+    text-align: center;
+    color: #4a90e2;
+    margin-top: 0;
+}
+
+/*================================
+  NEW NAV STYLES
+=================================*/
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
 }
