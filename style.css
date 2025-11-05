@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
 
-        /* A subtle dot grid pattern */
+    /* A subtle dot grid pattern */
     background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
     background-size: 20px 20px;
 }
@@ -16,7 +16,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Basic styling for all sections */
 /* Basic styling for all sections */
 section {
     padding: 80px 40px; /* 80px top/bottom, 40px left/right */
@@ -29,7 +28,6 @@ h1, h2 {
     margin-bottom: 30px; /* Adds consistent space after headings */
 }
 
-/* We'll style the nav bar properly later */
 nav {
     position: fixed; /* Makes the nav bar stick to the top */
     top: 0;
@@ -41,7 +39,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box; /* Ensures padding doesn't break layout */
-}}
+    z-index: 100; /* Ensures nav is always on top */
+}
 
 nav ul {
     list-style: none;
@@ -63,17 +62,67 @@ nav a:hover {
 }
 
 /*================================
+  NEW NAV STYLES
+=================================*/
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*================================
+  HOME SECTION
+=================================*/
+#home {
+    position: relative; /* This is essential for the particle background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh; 
+    overflow: hidden; /* Prevents scrollbars from the particles */
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    z-index: 2; /* Keeps the text ON TOP of the particles */
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 30px;
+    z-index: 2; /* Keeps the text ON TOP of the particles */
+}
+
+/* This styles the particle container */
+#particles-container {
+    position: absolute; /* Takes it out of the normal flow */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Puts the particles BEHIND the text */
+}
+
+/*================================
   ABOUT SECTION
 =================================*/
 #about {
-    /* Uses CSS Grid to center the content */
-    display: grid;
-    place-items: center;
-    text-align: center;
+    /* No more grid/centering */
 }
 
 .about-content {
     max-width: 800px; /* Constrains the width of the text */
+    margin: 0 auto; /* This centers the whole text block */
 }
 
 .about-content p {
@@ -87,13 +136,6 @@ nav a:hover {
 .skills-container {
     max-width: 900px;
     margin: 0 auto; /* Centering the container */
-}
-
-.skills-container h3 {
-    color: #4a90e2; /* Using the same blue from our nav hover */
-    border-bottom: 1px solid #444;
-    padding-bottom: 5px;
-    margin-top: 30px;
 }
 
 .skill-pills {
@@ -209,19 +251,4 @@ nav a:hover {
     text-align: center;
     color: #4a90e2;
     margin-top: 0;
-}
-
-/*================================
-  NEW NAV STYLES
-=================================*/
-.logo a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.nav-links ul {
-    margin: 0;
-    padding: 0;
 }
