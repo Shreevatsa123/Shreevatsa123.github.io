@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 /*================================
-  NEW NAV STYLES
+  NAV STYLES
 =================================*/
 .logo a {
     text-decoration: none;
@@ -77,47 +77,98 @@ nav a:hover {
 }
 
 /*================================
-  HOME SECTION
+  HOME SECTION (NEW OVERLAY LAYOUT)
 =================================*/
 #home {
-    position: relative; /* This is essential for the particle background */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 80vh; 
-    overflow: hidden; /* Prevents scrollbars from the particles */
+    height: 100vh;
+    overflow: hidden;
+    border-bottom: none;
+    position: relative; 
 }
 
-#home h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    z-index: 2; /* Keeps the text ON TOP of the particles */
-}
-
-#home p {
-    font-size: 1.2rem;
-    color: #aaa;
-    margin-bottom: 30px;
-    z-index: 2; /* Keeps the text ON TOP of the particles */
-}
-
-/* This styles the particle container */
-#particles-container {
-    position: absolute; /* Takes it out of the normal flow */
-    width: 100%;
-    height: 100%;
+/* This is the 3D background */
+.home-spline-background {
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Puts the particles BEHIND the text */
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind text */
+}
+
+.home-spline-background spline-viewer {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* This is the HTML text on top */
+/* This is the HTML text on top */
+.home-text-content {
+    position: relative; 
+    z-index: 2; /* On top */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* === THIS IS THE CHANGE === */
+    justify-content: flex-start; /* Aligns text to the TOP */
+    padding-top: 150px;           /* Adds space from the top nav */
+    /* === END OF CHANGE === */
+
+    align-items: flex-start;
+    padding-left: 5%;  /* Kept your 5% left padding */
+    padding-right: 5%;
+    max-width: 500px;
+    
+    /* FIX 1: Lets you click "through" the text
+       container to the cubes behind it */
+    pointer-events: none;
+
+    /* FIX 2: LIGHT/DARK MODE
+      This sets the DEFAULT text color for dark mode.
+    */
+    color: #e0e0e0; /* Light grey text */
+}
+
+/* This rule checks if the user's OS is in LIGHT mode.
+  If it is, it changes the text color to black.
+*/
+@media (prefers-color-scheme: light) {
+    .home-text-content {
+        color: #121212; /* Dark text */
+    }
+}
+
+/* We still need to make sure headings (h1, p)
+   can't be clicked on, but links (a) can be. */
+.home-text-content h1,
+.home-text-content p {
+    pointer-events: none;
+}
+
+.home-text-content a,
+.home-text-content button {
+    pointer-events: auto; /* Re-enables clicks for buttons */
+}
+
+/* Basic text styling */
+.home-text-content h1 {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.home-text-content p {
+    font-size: 1.2rem;
+    color: #aaa; /* Subtitle color */
+    text-align: left;
 }
 
 /*================================
   ABOUT SECTION
 =================================*/
 #about {
-    /* No more grid/centering */
+    /* Styles for about section */
 }
 
 .about-content {
