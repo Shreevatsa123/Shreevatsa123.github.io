@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Shreevatsa Agnihotri - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.0/build/spline-viewer.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.97/build/spline-viewer.js"></script>
 </head>
 <body>
 
     <nav>
         <div class="logo">
-            <a href="#home">Your Name</a>
+            <a href="#home">Shreevatsa Agnihotri</a>
         </div>
         <div class="nav-links">
             <ul>
@@ -20,6 +20,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
             </ul>
         </div>
     </nav>
@@ -28,7 +29,6 @@
         <div class="home-spline-background">
             <spline-viewer url="https://prod.spline.design/09eLYha0vmWnPOYM/scene.splinecode" scroll-zoom="false"></spline-viewer>
         </div>
-
         <div class="home-text-content">
             <h1>Shreevatsa Agnihotri</h1>
             <p>Data Scientist | Data Engineer</p>
@@ -39,58 +39,87 @@
         <h2>About Me</h2>
         <div class="about-content">
             <p>
-                Hello! I'm a passionate developer... (Your about me text goes here).
+                M.S. in Data Science student at the University of Maryland with professional experience as an Associate Data Engineer at Shell.
+                Proficient in Python, SQL, and data engineering technologies, with hands-on experience building and maintaining reliable data pipelines.
+                Skilled in translating business problems into technical solutions and leveraging analytics to improve user engagement.
+                A curious problem-solver and passionate coder eager to contribute to innovative projects.
             </p>
         </div>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-pills">
-                <span>Python</span>
-                <span>JavaScript</span>
-                <span>SQL</span>
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Data Analysis</span>
-                <span>Machine Learning</span>
+        
+        <div class="skills-layout-container">
+            
+            <div class="skills-spline-container">
+                <spline-viewer url="https://prod.spline.design/sZ06FkY-5CB-ROSB/scene.splinecode"></spline-viewer>
             </div>
-        </div>
-    </section>
+
+            <div class="skills-instructions">
+                <h3>Hit Mapped Keys</h3>
+                <p>(Make sure caps lock is off)</p>
+                
+                <ul class="key-guide">
+                    <li><strong>V</strong> - BI & Visualization</li>
+                    <li><strong>C</strong> - Cloud</li>
+                    <li><strong>T</strong> - Development Tools</li>
+                    <li><strong>P</strong> - Programming & Databases</li>
+                    <li><strong>M</strong> - DS/ML</li>
+                    <li><strong>D</strong> - Data Engineering</li>
+                </ul>
+            </div>
+
+        </div> </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <h3>Project 1</h3>
-                <p>A brief description of your project.</p>
-                <a href="#">View on GitHub</a>
+                <h3>AI Financial Analyst Dashboard</h3>
+                <p>Engineered an automated data pipeline to ingest market data and built a full-stack app with an XGBoost classifier and NLP (Hugging Face) to visualize results in an interactive Streamlit dashboard.</p>
+                <a href="https://github.com/Shreevatsa123/stock-prediction-dashboard" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
-                <h3>Project 2</h3>
-                <p>A brief description of your project.</p>
-                <a href="#">View on GitHub</a>
+                <h3>Automated Job Scraper & Notifier</h3>
+                <p>Built an automated web scraper using Python and Selenium. Orchestrated containerized (Docker) daily workflows with Apache Airflow to schedule, filter, and load listings into a SQLite database.</p>
+                <a href="https://github.com/Shreevatsa123/hire-me-H1B-scrapper-v2" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
-                <h3>Project 3</h3>
-                <p>A brief description of your project.</p>
-                <a href="#">View on GitHub</a>
+                <h3>Voice Navigated Telemedicine Website</h3>
+                <p>Developed a voice-navigated website using HMM/RNN models for voice recognition. Validated the system with visually impaired users, improving accessibility. Published and adopted in MIT Manipal's HCI curriculum.</p>
+                <a href="https://github.com/Shreevatsa123/voice-navigated-telemedicine-website" target="_blank">View on GitHub</a>
             </div>
         </div>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
+        
         <div class="experience-item">
-            <h3>Senior Data Analyst</h3>
-            <h4>Big Tech Co.</h4>
-            <h5>Jan 2022 - Present</h5>
+            <h3>Associate Data Engineer</h3>
+            <h4>Shell Business Operations</h4>
+            <h5>August 2023 - August 2025</h5>
             <ul>
-                <li>Did cool things with data.</li>
-                <li>Built dashboards and pipelines.</li>
+                <li>Engineered 30+ reliable data pipelines for large-scale data (millions of daily records) using AWS, Azure, PySpark, and SQL.</li>
+                <li>Provided strategic insight for a 20% user engagement uplift by analyzing user behavior patterns and translating business problems into technical data solutions.</li>
+                <li>Collaborated with 15+ cross-functional teams to support critical data model migration to Databricks and deliver core data platform infrastructure.</li>
+                <li>Implemented robust monitoring, alerting, data validation, and automated testing (CI/CD) for key data pipelines to improve reliability.</li>
+                <li>Recognized for exceptional performance with an early promotion offer to Data Engineer.</li>
             </ul>
         </div>
+
+        <div class="experience-item">
+            <h3>Research Assistant</h3>
+            <h4>Manipal Institute of Technology</h4>
+            <h5>January 2023 - June 2023</h5>
+            <ul>
+                <li>Designed and developed the accessible telemedicine website with voice navigation (see Projects section).</li>
+                <li>Conducted usability studies with visually impaired participants to evaluate accessibility and user experience.</li>
+                <li>Collected and analyzed qualitative/quantitative data on task performance, satisfaction, and system accuracy.</li>
+            </ul>
+        </div>
+        
     </section>
 
     <section id="education">
@@ -99,11 +128,23 @@
             <div class="education-item">
                 <h3>M.S. in Data Science</h3>
                 <h4>University of Maryland</h4>
+                <p>College Park, MD | Sept 2025 - May 2027</p>
             </div>
             <div class="education-item">
-                <h3>B.S. in Computer Science</h3>
-                <h4>Some Other University</h4>
+                <h3>B.Tech in Information Technology</h3>
+                <h4>Manipal Institute of Technology</h4>
+                <p>Manipal, India | May 2019 - June 2023</p>
+                <p>GPA: 3.67/4.00 | Minor: Data Analytics</p>
             </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-list">
+            <p>Databricks Certified: Data Engineer Associate</p>
+            <p>Databricks: Generative AI Fundamentals</p>
+            <p>The Linux Foundation: Green Software for Practitioners (LFC131)</p>
         </div>
     </section>
 

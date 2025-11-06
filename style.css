@@ -102,45 +102,28 @@ nav a:hover {
 }
 
 /* This is the HTML text on top */
-/* This is the HTML text on top */
 .home-text-content {
     position: relative; 
     z-index: 2; /* On top */
     height: 100%;
     display: flex;
     flex-direction: column;
-
-    /* === THIS IS THE CHANGE === */
     justify-content: flex-start; /* Aligns text to the TOP */
     padding-top: 150px;           /* Adds space from the top nav */
-    /* === END OF CHANGE === */
-
     align-items: flex-start;
     padding-left: 5%;  /* Kept your 5% left padding */
     padding-right: 5%;
     max-width: 500px;
-    
-    /* FIX 1: Lets you click "through" the text
-       container to the cubes behind it */
     pointer-events: none;
-
-    /* FIX 2: LIGHT/DARK MODE
-      This sets the DEFAULT text color for dark mode.
-    */
     color: #e0e0e0; /* Light grey text */
 }
 
-/* This rule checks if the user's OS is in LIGHT mode.
-  If it is, it changes the text color to black.
-*/
 @media (prefers-color-scheme: light) {
     .home-text-content {
         color: #121212; /* Dark text */
     }
 }
 
-/* We still need to make sure headings (h1, p)
-   can't be clicked on, but links (a) can be. */
 .home-text-content h1,
 .home-text-content p {
     pointer-events: none;
@@ -182,34 +165,10 @@ nav a:hover {
 }
 
 /*================================
-  SKILLS SECTION
-=================================*/
-.skills-container {
-    max-width: 900px;
-    margin: 0 auto; /* Centering the container */
-}
-
-.skill-pills {
-    display: flex;
-    flex-wrap: wrap; /* Allows pills to wrap to the next line */
-    gap: 10px; /* Spacing between pills */
-}
-
-.skill-pills span {
-    background-color: #333;
-    color: #e0e0e0;
-    padding: 8px 15px;
-    border-radius: 20px; /* This makes the "pill" shape */
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-/*================================
   PROJECTS SECTION
 =================================*/
 .project-grid {
     display: grid;
-    /* Creates a responsive 3-column grid on desktop */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     max-width: 1200px;
@@ -217,15 +176,15 @@ nav a:hover {
 }
 
 .project-card {
-    background-color: #1e1e1e; /* A slightly lighter dark-grey */
+    background-color: #1e1e1e;
     border: 1px solid #333;
     padding: 25px;
     border-radius: 8px;
-    transition: all 0.3s ease; /* Smooth transition for hover */
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Lifts the card on hover */
+    transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -250,7 +209,7 @@ nav a:hover {
 =================================*/
 .experience-item {
     max-width: 800px;
-    margin: 0 auto; /* Center the content */
+    margin: 0 auto 20px auto; /* Center the content, added bottom margin */
     background-color: #1e1e1e;
     border: 1px solid #333;
     padding: 25px;
@@ -284,7 +243,7 @@ nav a:hover {
 =================================*/
 .education-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -302,4 +261,118 @@ nav a:hover {
     text-align: center;
     color: #4a90e2;
     margin-top: 0;
+}
+
+/*================================
+  CERTIFICATIONS SECTION
+=================================*/
+#certifications {
+    border-bottom: none; /* No border on the last section */
+}
+.certifications-list {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.certifications-list p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/*================================
+  NEW SKILLS SECTION (SPLINE)
+=================================*/
+
+/* This section no longer needs 100vh height */
+#skills {
+    padding: 80px 40px;
+}
+
+/* This is the new flex container for the 2-column layout */
+.skills-layout-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligns blocks to the top */
+    gap: 40px; /* Space between spline and text */
+    max-width: 1450px; 
+    margin: 0 auto; /* Centers the whole layout */
+}
+
+/* Column 1: The Spline Scene */
+.skills-spline-container {
+    flex: 6; /* Spline takes up 6 parts of the space */
+    height: 700px; /* Set a fixed height */
+    min-width: 0; /* Fix for flexbox overflow */
+    /* overflow: hidden;  <-- CHOPPING FIX: This is gone */
+}
+
+/* This makes the spline scene fill its container */
+.skills-spline-container spline-viewer {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 8px; /* Adds rounded corners to the spline scene */
+}
+
+/* Column 2: The HTML Instructions */
+.skills-instructions {
+    flex: 4; /* Text takes up 4 parts of the space */
+    min-width: 0; /* Fix for flexbox overflow */
+    
+    /* Default dark mode text color */
+    color: #aaa; 
+}
+
+.skills-instructions h3 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 10px;
+    
+    /* Default dark mode text color */
+    color: #ffffff;
+}
+
+.skills-instructions p {
+    font-size: 1.1rem;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.key-guide {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-guide li {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.key-guide li strong {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    width: 25px; /* Aligns the keys */
+    display: inline-block;
+}
+
+
+/* *** THE THEME-SWITCHING FIX ***
+  This checks if the user's OS is in LIGHT mode.
+*/
+@media (prefers-color-scheme: light) {
+    .skills-instructions {
+        color: #333333; /* Dark grey text for light mode */
+    }
+    
+    .skills-instructions h3 {
+        color: #000000; /* Black text for light mode */
+    }
+
+    .key-guide li strong {
+        color: #121212; /* Darker text for light mode */
+    }
 }
