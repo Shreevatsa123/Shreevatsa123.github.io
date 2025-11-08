@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreevatsa Agnihotri - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.97/build/spline-viewer.js"></script>
 </head>
 <body>
@@ -68,110 +69,156 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-grid">
 
-            <div class="project-card">
-                <div class="project-image-container">
-                    <img src="images/project-ai-analyst.png" alt="AI Financial Analyst Dashboard">
-                    
-                    <div class="project-overlay">
-                        <p>Engineered an automated data pipeline to ingest market data and built a full-stack app with an XGBoost classifier and NLP (Hugging Face) to visualize results in an interactive Streamlit dashboard.</p>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>AI Financial Analyst Dashboard</h3>
-                    <div class="project-tech-stack">
-                        <span>Python</span>
-                        <span>Streamlit</span>
-                        <span>XGBoost</span>
-                        <span>Hugging Face</span>
-                        <span>NLP</span>
-                    </div>
-                    <a href="https://github.com/Shreevatsa123/stock-prediction-dashboard" target="_blank">View on GitHub</a>
-                </div>
+        <div class="splide" role="group" aria-label="My Projects">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    <li class="splide__slide">
+                        <div class="project-card">
+                            <div class="project-image-container">
+                                <img src="images/project-ai-analyst.png" alt="AI Financial Analyst Dashboard">
+                                <div class="project-overlay">
+                                    <p>Engineered an automated data pipeline to ingest market data and built a full-stack app with an XGBoost classifier and NLP (Hugging Face) to visualize results in an interactive Streamlit dashboard.</p>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>AI Financial Analyst Dashboard</h3>
+                                <div class="project-tech-stack">
+                                    <span>Python</span>
+                                    <span>Streamlit</span>
+                                    <span>XGBoost</span>
+                                    <span>Hugging Face</span>
+                                    <span>NLP</span>
+                                </div>
+                                <a href="https://github.com/Shreevatsa123/stock-prediction-dashboard" target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="project-card">
+                            <div class="project-image-container">
+                                <img src="images/project-job-scraper.png" alt="Automated Job Scraper">
+                                <div class="project-overlay">
+                                    <p>Built an automated web scraper using Python and Selenium. Orchestrated containerized (Docker) daily workflows with Apache Airflow to schedule, filter, and load listings into a SQLite database.</p>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Automated Job Scraper & Notifier</h3>
+                                <div class="project-tech-stack">
+                                    <span>Python</span>
+                                    <span>Selenium</span>
+                                    <span>Docker</span>
+                                    <span>Apache Airflow</span>
+                                    <span>SQLite</span>
+                                </div>
+                                <a href="https://github.com/Shreevatsa123/hire-me-H1B-scrapper-v2" target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="project-card">
+                            <div class="project-image-container">
+                                <img src="images/project-telemedicine.png" alt="Voice Navigated Telemedicine Website">
+                                <div class="project-overlay">
+                                    <p>Developed a voice-navigated website using HMM/RNN models for voice recognition. Validated the system with visually impaired users, improving accessibility. Published and adopted in MIT Manipal's HCI curriculum.</p>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Voice Navigated Telemedicine Website</h3>
+                                <div class="project-tech-stack">
+                                    <span>Voice Recognition</span>
+                                    <span>HMM/RNN</span>
+                                    <span>Accessibility</span>
+                                    <span>HCI</span>
+                                </div>
+                                <a href="https://github.com/Shreevatsa123/voice-navigated-telemedicine-website" target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
-
-            <div class="project-card">
-                <div class="project-image-container">
-                    <img src="images/project-job-scraper.png" alt="Automated Job Scraper">
-                    
-                    <div class="project-overlay">
-                        <p>Built an automated web scraper using Python and Selenium. Orchestrated containerized (Docker) daily workflows with Apache Airflow to schedule, filter, and load listings into a SQLite database.</p>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Automated Job Scraper & Notifier</h3>
-                    <div class="project-tech-stack">
-                        <span>Python</span>
-                        <span>Selenium</span>
-                        <span>Docker</span>
-                        <span>Apache Airflow</span>
-                        <span>SQLite</span>
-                    </div>
-                    <a href="https://github.com/Shreevatsa123/hire-me-H1B-scrapper-v2" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-container">
-                    <img src="images/project-telemedicine.png" alt="Voice Navigated Telemedicine Website">
-                    
-                    <div class="project-overlay">
-                        <p>Developed a voice-navigated website using HMM/RNN models for voice recognition. Validated the system with visually impaired users, improving accessibility. Published and adopted in MIT Manipal's HCI curriculum.</p>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Voice Navigated Telemedicine Website</h3>
-                    <div class="project-tech-stack">
-                        <span>Voice Recognition</span>
-                        <span>HMM/RNN</span>
-                        <span>Accessibility</span>
-                        <span>HCI</span>
-                    </div>
-                    <a href="https://github.com/Shreevatsa123/voice-navigated-telemedicine-website" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-
         </div>
+
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
         
-        <div class="experience-item">
+        <div class="experience-container">
             
-            <img src="images/shell-logo.png" alt="Shell Logo" class="company-logo">
-            
-            <div class="experience-content">
-                <h3>Associate Data Engineer</h3>
-                <h4>Shell Business Operations</h4>
-                <h5>August 2023 - August 2025</h5>
-                <ul>
-                    <li>Engineered 30+ reliable data pipelines for large-scale data (millions of daily records) using AWS, Azure, PySpark, and SQL.</li>
-                    <li>Provided strategic insight for a 20% user engagement uplift by analyzing user behavior patterns and translating business problems into technical data solutions.</li>
-                    <li>Collaborated with 15+ cross-functional teams to support critical data model migration to Databricks and deliver core data platform infrastructure.</li>
-                    <li>Implemented robust monitoring, alerting, data validation, and automated testing (CI/CD) for key data pipelines to improve reliability.</li>
-                    <li>Recognized for exceptional performance with an early promotion offer to Data Engineer.</li>
-                </ul>
+            <div class="experience-tabs">
+                <div class="experience-tab-list">
+                    <button class="exp-tab active" data-target="shell">Shell</button>
+                    <button class="exp-tab" data-target="mit">Manipal</button>
+                    <button class="exp-tab" data-target="saf">SAF</button>
+                </div>
             </div>
-        </div>
-
-        <div class="experience-item">
             
-            <img src="images/mit-logo.png" alt="Manipal Institute of Technology Logo" class="company-logo">
-
-            <div class="experience-content">
-                <h3>Research Assistant</h3>
-                <h4>Manipal Institute of Technology</h4>
-                <h5>January 2023 - June 2023</h5>
-                <ul>
-                    <li>Designed and developed the accessible telemedicine website with voice navigation (see Projects section).</li>
-                    <li>Conducted usability studies with visually impaired participants to evaluate accessibility and user experience.</li>
-                    <li>Collected and analyzed qualitative/quantitative data on task performance, satisfaction, and system accuracy.</li>
-                </ul>
+            <div class="experience-content-panels">
+                
+                <div class="exp-panel active" id="shell">
+                    <h3>Associate Data Engineer <span>@ Shell</span></h3>
+                    <h4>Shell Business Operations</h4>
+                    <h5>August 2023 - August 2025</h5>
+                    <ul>
+                        <li>Engineered 30+ reliable data pipelines for large-scale data (millions of daily records) using AWS, Azure, PySpark, and SQL.</li>
+                        <li>Provided strategic insight for a 20% user engagement uplift by analyzing user behavior patterns and translating business problems into technical data solutions.</li>
+                        <li>Collaborated with 15+ cross-functional teams to support critical data model migration to Databricks and deliver core data platform infrastructure.</li>
+                        <li>Implemented robust monitoring, alerting, data validation, and automated testing (CI/CD) for key data pipelines to improve reliability.</li>
+                    </ul>
+                    <div class="exp-tech-stack">
+                        <span>AWS</span>
+                        <span>Azure</span>
+                        <span>PySpark</span>
+                        <span>SQL</span>
+                        <span>Databricks</span>
+                        <span>CI/CD</span>
+                    </div>
+                </div>
+                
+                <div class="exp-panel" id="mit">
+                    <h3>Research Assistant <span>@ MIT</span></h3>
+                    <h4>Manipal Institute of Technology</h4>
+                    <h5>January 2023 - June 2023</h5>
+                    <ul>
+                        <li>Designed and developed the accessible telemedicine website with voice navigation (see Projects section).</li>
+                        <li>Conducted usability studies with visually impaired participants to evaluate accessibility and user experience.</li>
+                        <li>Collected and analyzed qualitative/quantitative data on task performance, satisfaction, and system accuracy.</li>
+                    </ul>
+                    <div class="exp-tech-stack">
+                        <span>HCI</span>
+                        <span>Usability Testing</span>
+                        <span>Data Analysis</span>
+                        <span>Accessibility</span>
+                    </div>
+                </div>
+                
+                <div class="exp-panel" id="saf">
+                    <h3>IT Assistant (Intern) <span>@ SAF</span></h3>
+                    <h4>Small Arms Factory</h4>
+                    <h5>June 2022 - August 2022</h5>
+                    <ul>
+                        <li>Developed and deployed the internal company website used by employees for IT resources and support.</li>
+                        <li>Served as a key member of the IT support team, providing company-wide technical assistance and resolving helpdesk tickets.</li>
+                    </ul>
+                    <div class="exp-tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>jQuery</span>
+                        <span>PHP</span>
+                        <span>IT Support</span>
+                    </div>
+                </div>
+                
             </div>
+            
         </div>
-        
     </section>
 
     <section id="education">
@@ -199,6 +246,55 @@
             <p>The Linux Foundation: Green Software for Practitioners (LFC131)</p>
         </div>
     </section>
+
+    <section id="certifications">
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('.splide', {
+        type: 'loop',       // Loop the carousel
+        perPage: 3,         // Show 3 slides on wide screens
+        perMove: 1,         // Move 1 slide at a time
+        gap: '20px',        // Space between slides
+        pagination: false,  // Hide the little dots at the bottom
+        drag: true,
+        wheel: true,
+        breakpoints: {
+            1200: {
+            perPage: 2,     // Show 2 slides on tablets
+            },
+            768: {
+            perPage: 1,     // Show 1 slide on mobile
+            },
+        },
+        }).mount();
+    });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.exp-tab');
+        const panels = document.querySelectorAll('.exp-panel');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            // 1. Get the target panel's ID from the 'data-target' attribute
+            const targetId = tab.getAttribute('data-target');
+            const targetPanel = document.getElementById(targetId);
+
+            // 2. Remove 'active' class from all tabs and panels
+            tabs.forEach(t => t.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+
+            // 3. Add 'active' class to the clicked tab and its target panel
+            tab.classList.add('active');
+            targetPanel.classList.add('active');
+          });
+        });
+      });
+    </script>
 
 </body>
 </html>
