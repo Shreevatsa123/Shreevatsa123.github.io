@@ -11,6 +11,11 @@ body {
     background-size: 20px 20px;
 }
 
+p {
+    font-size: 1.1rem; /* Sets a new, larger default */
+    line-height: 1.6;
+}
+
 /* This makes the page scroll smoothly when you click a nav link */
 html {
     scroll-behavior: smooth;
@@ -19,13 +24,13 @@ html {
 /* Basic styling for all sections */
 section {
     padding: 80px 40px; /* 80px top/bottom, 40px left/right */
-    border-bottom: 1px solid #333; /* A subtle line between sections */
 }
 
 h1, h2 {
     color: #ffffff; /* Pure white for main headings */
     text-align: center;
     margin-bottom: 30px; /* Adds consistent space after headings */
+    font-size: 2.2rem; /* <--- ADD THIS LINE */
 }
 
 nav {
@@ -55,6 +60,7 @@ nav a {
     text-decoration: none;
     color: #e0e0e0;
     font-weight: bold;
+    font-size: 1.1rem; /* <--- ADD THIS LINE */
 }
 
 nav a:hover {
@@ -68,7 +74,7 @@ nav a:hover {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .nav-links ul {
@@ -113,7 +119,7 @@ nav a:hover {
     align-items: flex-start;
     padding-left: 5%;  /* Kept your 5% left padding */
     padding-right: 5%;
-    max-width: 500px;
+    max-width: 650px;
     pointer-events: none;
     color: #e0e0e0; /* Light grey text */
 }
@@ -127,6 +133,13 @@ nav a:hover {
 .home-text-content h1,
 .home-text-content p {
     pointer-events: none;
+}
+/* Style for the new "about" paragraph on the home screen */
+.home-about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c0c0c0;     /* A bit lighter than the subtitle */
+    margin-top: 20px; /* Adds some space below your title */
 }
 
 .home-text-content a,
@@ -148,23 +161,6 @@ nav a:hover {
 }
 
 /*================================
-  ABOUT SECTION
-=================================*/
-#about {
-    /* Styles for about section */
-}
-
-.about-content {
-    max-width: 800px; /* Constrains the width of the text */
-    margin: 0 auto; /* This centers the whole text block */
-}
-
-.about-content p {
-    font-size: 1.2rem; /* Slightly larger text for the intro */
-    line-height: 1.6;
-}
-
-/*================================
   PROJECTS SECTION
 =================================*/
 .project-grid {
@@ -181,6 +177,7 @@ nav a:hover {
     padding: 25px;
     border-radius: 8px;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -192,6 +189,7 @@ nav a:hover {
     text-align: left;
     margin-top: 0;
     color: #4a90e2;
+    font-size: 1.4rem; /* <--- ADD THIS LINE */
 }
 
 .project-card p {
@@ -205,21 +203,134 @@ nav a:hover {
 }
 
 /*================================
-  EXPERIENCE SECTION
+  NEW PROJECT CARD STYLES
 =================================*/
+
+/* This holds the text content *below* the image */
+.project-content {
+    padding: 25px;
+}
+
+/* This is the container for the image and overlay */
+.project-image-container {
+    position: relative; /* Allows us to position the overlay inside */
+    width: 100%;
+    height: 220px; /* Gives all cards a uniform image height */
+}
+
+/* Styles the project image */
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This scales and crops the image nicely */
+}
+
+/* This is the overlay that appears on hover */
+.project-overlay {
+    position: absolute; /* Sits on top of the image container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* A semi-transparent dark background */
+    background-color: rgba(30, 30, 30, 0.9); 
+    backdrop-filter: blur(4px); /* Adds a cool "blur-behind" effect */
+    color: #e0e0e0;
+
+    /* Hide it by default */
+    opacity: 0;
+    
+    /* Center the description text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    text-align: left;
+    
+    transition: opacity 0.3s ease; /* Smooth fade-in/out */
+}
+
+/* The description text inside the overlay */
+.project-overlay p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* This is the hover magic! */
+.project-card:hover .project-overlay {
+    opacity: 1; /* Show the overlay */
+}
+
+/* This is the container for your tech stack "tags" */
+.project-tech-stack {
+    margin: 15px 0; /* Adds space between title and link */
+    display: flex;
+    flex-wrap: wrap; /* Allows tags to wrap to the next line */
+    gap: 8px; /* Space between tags */
+}
+
+/* This styles each individual tag */
+.project-tech-stack span {
+    background-color: #333;
+    color: #4a90e2; /* Using your theme's highlight blue */
+    padding: 5px 12px;
+    border-radius: 15px; /* Pill shape */
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* We just need to adjust the existing h3 rule a bit */
+.project-card h3 {
+    text-align: left;
+    margin-top: 0;
+    color: #4a90e2;
+    font-size: 1.4rem;
+}
+
+/*================================
+  EXPERIENCE SECTION (NEW CARD LAYOUT)
+=================================*/
+
+/* This is the main container for one job */
 .experience-item {
-    max-width: 800px;
-    margin: 0 auto 20px auto; /* Center the content, added bottom margin */
+    display: flex; /* Aligns logo and text side-by-side */
+    align-items: flex-start; /* Aligns top of logo with top of text */
+    gap: 25px; /* Space between logo and text */
+    
+    /* These are your original card styles, which look great */
     background-color: #1e1e1e;
     border: 1px solid #333;
     padding: 25px;
     border-radius: 8px;
+
+    /* Sizing and centering */
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* 20px margin between job cards */
 }
 
+/* This styles the new logo */
+.company-logo {
+    width: 60px;  /* Or your preferred size */
+    height: 60px; /* Or your preferred size */
+    border-radius: 8px;
+    object-fit: contain; /* Prevents stretching */
+}
+
+/* This wrapper for the text block */
+.experience-content {
+    flex: 1; /* Makes the text block fill the remaining space */
+}
+
+/* Your original styles for the text are perfect.
+   They should still be in your file, but here
+   they are just in case. */
 .experience-item h3 {
     text-align: left;
     color: #4a90e2;
     margin: 0;
+    font-size: 1.4rem;
 }
 .experience-item h4 {
     text-align: left;
@@ -236,6 +347,7 @@ nav a:hover {
 .experience-item ul {
     text-align: left;
     line-height: 1.6;
+    padding-left: 20px; /* Ensures bullets have space */
 }
 
 /*================================
@@ -261,6 +373,7 @@ nav a:hover {
     text-align: center;
     color: #4a90e2;
     margin-top: 0;
+    font-size: 1.4rem; /* <--- ADD THIS LINE */
 }
 
 /*================================
@@ -327,6 +440,7 @@ nav a:hover {
     font-size: 2rem;
     text-align: left;
     margin-bottom: 10px;
+    font-size: 1.4rem; /* <--- ADD THIS LINE */
     
     /* Default dark mode text color */
     color: #ffffff;
@@ -370,6 +484,7 @@ nav a:hover {
     
     .skills-instructions h3 {
         color: #000000; /* Black text for light mode */
+        font-size: 1.4rem; /* <--- ADD THIS LINE */
     }
 
     .key-guide li strong {

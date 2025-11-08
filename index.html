@@ -15,7 +15,6 @@
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -32,13 +31,8 @@
         <div class="home-text-content">
             <h1>Shreevatsa Agnihotri</h1>
             <p>Data Scientist | Data Engineer</p>
-        </div>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
+            <p class="home-about-text">
                 M.S. in Data Science student at the University of Maryland with professional experience as an Associate Data Engineer at Shell.
                 Proficient in Python, SQL, and data engineering technologies, with hands-on experience building and maintaining reliable data pipelines.
                 Skilled in translating business problems into technical solutions and leveraging analytics to improve user engagement.
@@ -57,7 +51,7 @@
             </div>
 
             <div class="skills-instructions">
-                <h3>Hit Mapped Keys</h3>
+                <h3>Hit Keyboard    Mapped Keys</h3>
                 <p>(Make sure caps lock is off)</p>
                 
                 <ul class="key-guide">
@@ -75,21 +69,69 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
+
             <div class="project-card">
-                <h3>AI Financial Analyst Dashboard</h3>
-                <p>Engineered an automated data pipeline to ingest market data and built a full-stack app with an XGBoost classifier and NLP (Hugging Face) to visualize results in an interactive Streamlit dashboard.</p>
-                <a href="https://github.com/Shreevatsa123/stock-prediction-dashboard" target="_blank">View on GitHub</a>
+                <div class="project-image-container">
+                    <img src="images/project-ai-analyst.png" alt="AI Financial Analyst Dashboard">
+                    
+                    <div class="project-overlay">
+                        <p>Engineered an automated data pipeline to ingest market data and built a full-stack app with an XGBoost classifier and NLP (Hugging Face) to visualize results in an interactive Streamlit dashboard.</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>AI Financial Analyst Dashboard</h3>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>XGBoost</span>
+                        <span>Hugging Face</span>
+                        <span>NLP</span>
+                    </div>
+                    <a href="https://github.com/Shreevatsa123/stock-prediction-dashboard" target="_blank">View on GitHub</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <h3>Automated Job Scraper & Notifier</h3>
-                <p>Built an automated web scraper using Python and Selenium. Orchestrated containerized (Docker) daily workflows with Apache Airflow to schedule, filter, and load listings into a SQLite database.</p>
-                <a href="https://github.com/Shreevatsa123/hire-me-H1B-scrapper-v2" target="_blank">View on GitHub</a>
+                <div class="project-image-container">
+                    <img src="images/project-job-scraper.png" alt="Automated Job Scraper">
+                    
+                    <div class="project-overlay">
+                        <p>Built an automated web scraper using Python and Selenium. Orchestrated containerized (Docker) daily workflows with Apache Airflow to schedule, filter, and load listings into a SQLite database.</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Automated Job Scraper & Notifier</h3>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Selenium</span>
+                        <span>Docker</span>
+                        <span>Apache Airflow</span>
+                        <span>SQLite</span>
+                    </div>
+                    <a href="https://github.com/Shreevatsa123/hire-me-H1B-scrapper-v2" target="_blank">View on GitHub</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <h3>Voice Navigated Telemedicine Website</h3>
-                <p>Developed a voice-navigated website using HMM/RNN models for voice recognition. Validated the system with visually impaired users, improving accessibility. Published and adopted in MIT Manipal's HCI curriculum.</p>
-                <a href="https://github.com/Shreevatsa123/voice-navigated-telemedicine-website" target="_blank">View on GitHub</a>
+                <div class="project-image-container">
+                    <img src="images/project-telemedicine.png" alt="Voice Navigated Telemedicine Website">
+                    
+                    <div class="project-overlay">
+                        <p>Developed a voice-navigated website using HMM/RNN models for voice recognition. Validated the system with visually impaired users, improving accessibility. Published and adopted in MIT Manipal's HCI curriculum.</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Voice Navigated Telemedicine Website</h3>
+                    <div class="project-tech-stack">
+                        <span>Voice Recognition</span>
+                        <span>HMM/RNN</span>
+                        <span>Accessibility</span>
+                        <span>HCI</span>
+                    </div>
+                    <a href="https://github.com/Shreevatsa123/voice-navigated-telemedicine-website" target="_blank">View on GitHub</a>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -97,27 +139,37 @@
         <h2>Experience</h2>
         
         <div class="experience-item">
-            <h3>Associate Data Engineer</h3>
-            <h4>Shell Business Operations</h4>
-            <h5>August 2023 - August 2025</h5>
-            <ul>
-                <li>Engineered 30+ reliable data pipelines for large-scale data (millions of daily records) using AWS, Azure, PySpark, and SQL.</li>
-                <li>Provided strategic insight for a 20% user engagement uplift by analyzing user behavior patterns and translating business problems into technical data solutions.</li>
-                <li>Collaborated with 15+ cross-functional teams to support critical data model migration to Databricks and deliver core data platform infrastructure.</li>
-                <li>Implemented robust monitoring, alerting, data validation, and automated testing (CI/CD) for key data pipelines to improve reliability.</li>
-                <li>Recognized for exceptional performance with an early promotion offer to Data Engineer.</li>
-            </ul>
+            
+            <img src="images/shell-logo.png" alt="Shell Logo" class="company-logo">
+            
+            <div class="experience-content">
+                <h3>Associate Data Engineer</h3>
+                <h4>Shell Business Operations</h4>
+                <h5>August 2023 - August 2025</h5>
+                <ul>
+                    <li>Engineered 30+ reliable data pipelines for large-scale data (millions of daily records) using AWS, Azure, PySpark, and SQL.</li>
+                    <li>Provided strategic insight for a 20% user engagement uplift by analyzing user behavior patterns and translating business problems into technical data solutions.</li>
+                    <li>Collaborated with 15+ cross-functional teams to support critical data model migration to Databricks and deliver core data platform infrastructure.</li>
+                    <li>Implemented robust monitoring, alerting, data validation, and automated testing (CI/CD) for key data pipelines to improve reliability.</li>
+                    <li>Recognized for exceptional performance with an early promotion offer to Data Engineer.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="experience-item">
-            <h3>Research Assistant</h3>
-            <h4>Manipal Institute of Technology</h4>
-            <h5>January 2023 - June 2023</h5>
-            <ul>
-                <li>Designed and developed the accessible telemedicine website with voice navigation (see Projects section).</li>
-                <li>Conducted usability studies with visually impaired participants to evaluate accessibility and user experience.</li>
-                <li>Collected and analyzed qualitative/quantitative data on task performance, satisfaction, and system accuracy.</li>
-            </ul>
+            
+            <img src="images/mit-logo.png" alt="Manipal Institute of Technology Logo" class="company-logo">
+
+            <div class="experience-content">
+                <h3>Research Assistant</h3>
+                <h4>Manipal Institute of Technology</h4>
+                <h5>January 2023 - June 2023</h5>
+                <ul>
+                    <li>Designed and developed the accessible telemedicine website with voice navigation (see Projects section).</li>
+                    <li>Conducted usability studies with visually impaired participants to evaluate accessibility and user experience.</li>
+                    <li>Collected and analyzed qualitative/quantitative data on task performance, satisfaction, and system accuracy.</li>
+                </ul>
+            </div>
         </div>
         
     </section>
