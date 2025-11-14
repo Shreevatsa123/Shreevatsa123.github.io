@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreevatsa Agnihotri - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.97/build/spline-viewer.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.11.2/build/spline-viewer.js"></script>
 </head>
 <body>
 
@@ -27,7 +30,7 @@
 
     <section id="home">
         <div class="home-spline-background">
-            <spline-viewer url="https://prod.spline.design/09eLYha0vmWnPOYM/scene.splinecode" scroll-zoom="false"></spline-viewer>
+            <spline-viewer url="https://prod.spline.design/09eLYha0vmWnPOYM/scene.splinecode"></spline-viewer>
         </div>
         <div class="home-text-content">
             <h1>Shreevatsa Agnihotri</h1>
@@ -42,7 +45,7 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-on-scroll">
         <h2>Skills</h2>
         
         <div class="skills-layout-container">
@@ -67,7 +70,7 @@
 
         </div> </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-on-scroll">
         <h2>Projects</h2>
 
         <div class="splide" role="group" aria-label="My Projects">
@@ -145,7 +148,7 @@
 
     </section>
 
-    <section id="experience">
+    <section id="experience" class="fade-on-scroll">
         <h2>Experience</h2>
         
         <div class="experience-container">
@@ -153,7 +156,7 @@
             <div class="experience-tabs">
                 <div class="experience-tab-list">
                     <button class="exp-tab active" data-target="shell">Shell</button>
-                    <button class="exp-tab" data-target="mit">Manipal</button>
+                    <button class="exp-tab" data-target="mit">MIT</button>
                     <button class="exp-tab" data-target="saf">SAF</button>
                 </div>
             </div>
@@ -170,14 +173,14 @@
                         <li>Collaborated with 15+ cross-functional teams to support critical data model migration to Databricks and deliver core data platform infrastructure.</li>
                         <li>Implemented robust monitoring, alerting, data validation, and automated testing (CI/CD) for key data pipelines to improve reliability.</li>
                     </ul>
-                    <div class="exp-tech-stack">
-                        <span>AWS</span>
-                        <span>Azure</span>
-                        <span>PySpark</span>
-                        <span>SQL</span>
-                        <span>Databricks</span>
-                        <span>CI/CD</span>
-                    </div>
+                    <ul class="exp-skill-list">
+                        <li>AWS</li>
+                        <li>Azure</li>
+                        <li>PySpark</li>
+                        <li>SQL</li>
+                        <li>Databricks</li>
+                        <li>CI/CD</li>
+                    </ul>
                 </div>
                 
                 <div class="exp-panel" id="mit">
@@ -189,11 +192,11 @@
                         <li>Conducted usability studies with visually impaired participants to evaluate accessibility and user experience.</li>
                         <li>Collected and analyzed qualitative/quantitative data on task performance, satisfaction, and system accuracy.</li>
                     </ul>
-                    <div class="exp-tech-stack">
-                        <span>HCI</span>
-                        <span>Usability Testing</span>
-                        <span>Data Analysis</span>
-                        <span>Accessibility</span>
+                    <div class="exp-skill-list">
+                        <li>HCI</li>
+                        <li>Usability Testing</li>
+                        <li>Data Analysis</li>
+                        <li>Accessibility</li>
                     </div>
                 </div>
                 
@@ -205,14 +208,11 @@
                         <li>Developed and deployed the internal company website used by employees for IT resources and support.</li>
                         <li>Served as a key member of the IT support team, providing company-wide technical assistance and resolving helpdesk tickets.</li>
                     </ul>
-                    <div class="exp-tech-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Bootstrap</span>
-                        <span>jQuery</span>
-                        <span>PHP</span>
-                        <span>IT Support</span>
+                    <div class="exp-skill-list">
+                        <li>HTML & CSS</li>
+                        <li>JavaScript (Bootstrap & jQuery)</li>
+                        <li>PHP</li>
+                        <li>IT Support</li>
                     </div>
                 </div>
                 
@@ -221,7 +221,7 @@
         </div>
     </section>
 
-    <section id="education">
+    <section id="education" class="fade-on-scroll">
         <h2>Education</h2>
         <div class="education-grid">
             <div class="education-item">
@@ -238,16 +238,13 @@
         </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" class="fade-on-scroll">
         <h2>Certifications</h2>
         <div class="certifications-list">
             <p>Databricks Certified: Data Engineer Associate</p>
             <p>Databricks: Generative AI Fundamentals</p>
             <p>The Linux Foundation: Green Software for Practitioners (LFC131)</p>
         </div>
-    </section>
-
-    <section id="certifications">
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -292,6 +289,31 @@
             tab.classList.add('active');
             targetPanel.classList.add('active');
           });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const sections = document.querySelectorAll('.fade-on-scroll');
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Stop watching once it's visible
+              }
+            });
+          },
+          {
+            rootMargin: '0px 0px -50px 0px', // Trigger slightly before it's fully in view
+            threshold: 0.1 // 10% of the element is visible
+          }
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section);
         });
       });
     </script>

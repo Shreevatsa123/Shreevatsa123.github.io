@@ -1,6 +1,8 @@
 /* Basic setup for our minimalist theme */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* WITH THIS LINE: */
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600; /* Use the 600 weight */
     background-color: #121212; /* Very dark grey background */
     color: #e0e0e0;            /* Light grey text */
     margin: 0;
@@ -9,6 +11,8 @@ body {
     /* A subtle dot grid pattern */
     background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
     background-size: 20px 20px;
+
+    animation: pageFadeIn 0.8s ease-in-out;
 }
 
 p {
@@ -21,17 +25,49 @@ html {
     scroll-behavior: smooth;
 }
 
+/*================================
+  ANIMATION STYLES
+=================================*/
+
+/* 1. Simple page load fade-in */
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. Setup for scroll-in elements */
+.fade-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px lower */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 3. The class that JavaScript will add */
+.fade-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
 /* Basic styling for all sections */
 section {
     padding: 80px 40px; /* 80px top/bottom, 40px left/right */
 }
 
-h1, h2 {
-    color: #ffffff; /* Pure white for main headings */
-    text-align: center;
-    margin-bottom: 30px; /* Adds consistent space after headings */
-    font-size: 2.2rem; /* <--- ADD THIS LINE */
+h1 {
+    color: #ffffff; 
+    text-align: left;
+    margin-bottom: 30px; 
+    font-size: 2.2rem; 
 }
+
+h2 {
+    color: #FF4136; /* Bright Red */
+    text-align: center; /* This ensures consistent, centered alignment */
+    text-transform: uppercase; 
+    font-size: 2.2rem; 
+    margin-bottom: 30px; 
+}
+
 
 nav {
     position: fixed; /* Makes the nav bar stick to the top */
@@ -358,34 +394,41 @@ nav a:hover {
 .exp-tab {
     background-color: transparent;
     border: none;
-    border-left: 3px solid transparent; /* Placeholder for active state */
+    border-left: 3px solid transparent;
     display: block;
     width: 100%;
     text-align: left;
     padding: 15px 20px;
     cursor: pointer;
 
-    color: #999; /* Inactive color */
+    color: #aaa; /* Lighter inactive color */
     font-size: 1.1rem;
-    font-weight: 500;
+    font-family: inherit; /* ADDED: Use "Exo 2" from body */
+    font-weight: inherit; /* ADDED: Use 600 weight from body */
     transition: all 0.3s ease;
 
-    /* Move tab text to the right of the vertical line */
     margin-left: -2px; 
 }
 
 .exp-tab:hover {
     color: #e0e0e0;
-    background-color: #1e1e1e;
+    background-color: transparent; /* CHANGED from #1e1e1e */
 }
 
 .exp-tab.active {
-    color: #4a90e2; /* Your theme's blue color */
-    font-weight: bold;
-    border-left: 3px solid #4a90e2;
-    background-color: #1a1a1a; /* Slight highlight */
-}
+    color: #FF4136; /* CHANGED: Bright red color */
 
+    /* ADDED: Styling for the underline */
+    text-decoration: underline;
+    text-decoration-color: #FF4136;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+
+    /* REMOVED these lines */
+    /* font-weight: bold; */
+    /* border-left: 3px solid #4a90e2; */
+    /* background-color: #1a1a1a; */
+}
 /* Right column: The content */
 .experience-content-panels {
     flex: 3; /* Takes 3 parts of the space */
@@ -430,21 +473,31 @@ nav a:hover {
     padding-left: 20px;
 }
 
-/* Re-using your project tech stack style for consistency */
-.exp-tech-stack {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+/* Replaced tech stack pills with a list */
+.exp-skill-list {
+    list-style: none; /* Removes default bullets */
+    padding-left: 0;
+    margin: 25px 0 0 0;
 }
 
-.exp-tech-stack span {
-    background-color: #333;
-    color: #4a90e2;
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: 500;
+.exp-skill-list li {
+    color: #e0e0e0; 
+    position: relative;
+    padding-left: 25px; /* Creates space for the "+" */
+    margin-bottom: 10px; /* Space between items */
+    font-size: 1.1rem; /* Match paragraph font size */
+}
+
+/* This adds the red "+" before each item */
+.exp-skill-list li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FF4136; /* Red color to match heading */
+    font-weight: bold; /* Make the + bold */
+    font-size: 1.1rem;
+    line-height: inherit; /* Aligns the + with the text */
 }
 
 /*================================
@@ -511,12 +564,15 @@ nav a:hover {
 
 /* Column 1: The Spline Scene */
 .skills-spline-container {
-    flex: 6; /* Spline takes up 6 parts of the space */
-    height: 700px; /* Set a fixed height */
-    min-width: 0; /* Fix for flexbox overflow */
-    /* overflow: hidden;  <-- CHOPPING FIX: This is gone */
-}
+    flex: 1; /* REVERTED: Back to 6, this fixes the cutoff */
+    height: 700px; 
+    min-width: 0; 
 
+    /* ADD THESE LINES: This moves the computer to the right */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 /* This makes the spline scene fill its container */
 .skills-spline-container spline-viewer {
     width: 100% !important;
@@ -526,7 +582,7 @@ nav a:hover {
 
 /* Column 2: The HTML Instructions */
 .skills-instructions {
-    flex: 4; /* Text takes up 4 parts of the space */
+    flex: 1; /* Text takes up 4 parts of the space */
     min-width: 0; /* Fix for flexbox overflow */
     
     /* Default dark mode text color */
